@@ -17,7 +17,9 @@ function fish_prompt
     if test "$USER" = "root"
       echo (flash_fst)"#root"
     else
-      echo (flash_snd)"@$USER"
+      echo -n (flash_snd)
+      printf \uf2bd
+      echo "$USER"
     end
   end)" "(flash_snd)"( "(begin
     if test "$PWD" = "/"
