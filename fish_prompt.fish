@@ -31,8 +31,6 @@ function fish_prompt
     end)"⌁"(flash_off)"|g" \
   | sed "s|/|"(flash_snd)" ) "(flash_off)"|g" \
   | sed "s|"$base"|"(flash_fst)$base(flash_off)"|g")(flash_snd)(begin
-    test "$PWD" = "$HOME"; and echo " "; echo ""
-    end)(begin
       if test "$PWD" = "/"
         echo ""
       else
