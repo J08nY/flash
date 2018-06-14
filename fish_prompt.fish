@@ -76,6 +76,10 @@ function fish_prompt
       echo -n "~/"(flash_fst)
       printf \uf03d
       echo -n (flash_off)
+    end)"|; s|~/mnt|"(begin
+      echo -n "~/"(flash_fst)
+      printf \uf0a0
+      echo -n (flash_off)
     end)"|" \
   | sed "s|~|"(begin
       test $code -eq 0; and echo (flash_fst); or echo (flash_dim)
